@@ -131,8 +131,8 @@
                             <PropertyValue Property="Value" Path="TotalPrice"/>
                             <PropertyValue Property="Label" String="{@i18n>totalPrice}"/>
                         </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Progress"/>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#Progress"/>
                             <PropertyValue Property="Label" String="{@i18n>progressOfTravel}"/>
                         </Record>
                         <Record Type="UI.DataField">
@@ -140,6 +140,13 @@
                             <PropertyValue Property="Label" String="{@i18n>agency}"/>
                         </Record>
                     </Collection>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="Progress">
+                    <Record>
+                        <PropertyValue Property="Value" Path="Progress"/>
+                        <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress"/>
+                        <PropertyValue Property="TargetValue" Int="100"/>
+                    </Record>
                 </Annotation>
             </Annotations>
             <Annotations Target="TravelService.Travel/TotalPrice">
