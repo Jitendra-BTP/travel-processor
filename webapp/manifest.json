@@ -154,7 +154,7 @@
                           "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Canceled"
                         }
                       ],
-                      "hideTableTitle": true,
+                      "hideTableTitle": false,
                       "showCounts": true
                     }
                   }
