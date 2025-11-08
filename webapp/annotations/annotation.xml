@@ -139,6 +139,14 @@
                             <PropertyValue Property="Value" Path="to_Agency_AgencyID"/>
                             <PropertyValue Property="Label" String="{@i18n>agency}"/>
                         </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Action" String="TravelService.rejectTravel"/>
+                            <PropertyValue Property="Label" String="rejectTravel"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Action" String="TravelService.acceptTravel"/>
+                            <PropertyValue Property="Label" String="acceptTravel"/>
+                        </Record>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.DataPoint" Qualifier="Progress">
@@ -206,7 +214,7 @@
                                                     <Record Type="UI.SelectionRangeType">
                                                         <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
                                                         <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
-                                                        <PropertyValue Property="Low" String="C" />
+                                                        <PropertyValue Property="Low" String="X" />
                                                     </Record>
                                             </Collection>
                                         </PropertyValue>
