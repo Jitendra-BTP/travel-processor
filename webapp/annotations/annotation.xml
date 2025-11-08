@@ -152,6 +152,71 @@
             <Annotations Target="TravelService.Travel/TotalPrice">
                 <Annotation Term="Measures.ISOCurrency" Path="CurrencyCode_code"/>
             </Annotations>
+            <Annotations Target="TravelService.Travel">
+                <Annotation Term="UI.SelectionVariant" Qualifier="Open">
+                    <Record Type="UI.SelectionVariantType">
+                        <PropertyValue Property="SelectOptions">
+                                <Collection>
+                                    <Record Type="UI.SelectOptionType">
+                                        <PropertyValue Property="PropertyName" PropertyPath="TravelStatus_code" />
+                                        <PropertyValue Property="Ranges">
+                                            <Collection>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                        <PropertyValue Property="Low" String="O" />
+                                                    </Record>
+                                            </Collection>
+                                        </PropertyValue>
+                                    </Record>
+                                </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Text" String="Open" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionVariant" Qualifier="Accepted">
+                    <Record Type="UI.SelectionVariantType">
+                        <PropertyValue Property="SelectOptions">
+                                <Collection>
+                                    <Record Type="UI.SelectOptionType">
+                                        <PropertyValue Property="PropertyName" PropertyPath="TravelStatus_code" />
+                                        <PropertyValue Property="Ranges">
+                                            <Collection>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                        <PropertyValue Property="Low" String="A" />
+                                                    </Record>
+                                            </Collection>
+                                        </PropertyValue>
+                                    </Record>
+                                </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Text" String="Accepted" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionVariant" Qualifier="Canceled">
+                    <Record Type="UI.SelectionVariantType">
+                        <PropertyValue Property="SelectOptions">
+                                <Collection>
+                                    <Record Type="UI.SelectOptionType">
+                                        <PropertyValue Property="PropertyName" PropertyPath="TravelStatus_code" />
+                                        <PropertyValue Property="Ranges">
+                                            <Collection>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                        <PropertyValue Property="Low" String="C" />
+                                                    </Record>
+                                            </Collection>
+                                        </PropertyValue>
+                                    </Record>
+                                </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Text" String="Canceled" />
+                    </Record>
+                </Annotation>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
