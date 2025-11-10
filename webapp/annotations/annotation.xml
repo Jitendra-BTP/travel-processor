@@ -164,12 +164,24 @@
                             <PropertyValue Property="ID" String="TotalPrice"/>
                             <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#TotalPrice"/>
                         </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="ID" String="Progress"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#progress"/>
+                        </Record>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.DataPoint" Qualifier="TotalPrice">
                     <Record Type="UI.DataPointType">
                         <PropertyValue Property="Value" Path="TotalPrice"/>
                         <PropertyValue Property="Title" String="{@i18n>totalPrice}"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="progress">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Value" Path="Progress"/>
+                        <PropertyValue Property="Title" String="{@i18n>progressOfTravel}"/>
+                        <PropertyValue Property="TargetValue" Int="100"/>
+                        <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress"/>
                     </Record>
                 </Annotation>
             </Annotations>
