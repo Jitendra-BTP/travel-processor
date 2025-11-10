@@ -147,6 +147,31 @@
                         </Record>
                     </Collection>
                 </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="TravelStatus_code">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Value" Path="TravelStatus_code"/>
+                        <PropertyValue Property="Title" String="{@i18n>travelStatus}"/>
+                        <PropertyValue Property="Criticality" Path="TravelStatus/criticality"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderFacets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="ID" String="TravelStatus_code"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#TravelStatus_code"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="ID" String="TotalPrice"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#TotalPrice"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="TotalPrice">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Value" Path="TotalPrice"/>
+                        <PropertyValue Property="Title" String="{@i18n>totalPrice}"/>
+                    </Record>
+                </Annotation>
             </Annotations>
             <Annotations Target="TravelService.Travel/TotalPrice">
                 <Annotation Term="Measures.ISOCurrency" Path="CurrencyCode_code"/>
@@ -246,6 +271,16 @@
                                     <PropertyValue Property="Value" Path="Language" />
                                 </Record>
                         </PropertyValue> -->
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="Description"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="TravelID"/>
+                            </Record>
+                        </PropertyValue>
                     </Record>
                 </Annotation>
             </Annotations>
