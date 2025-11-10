@@ -457,7 +457,7 @@
                             <PropertyValue Property="ID" String="TotalSupplPrice"/>
                             <PropertyValue Property="Target" AnnotationPath="@UI.Chart#TotalSupplPrice1"/>
                         </Record>
-</Collection>
+                    </Collection>
                 </Annotation>
                 <Annotation Term="UI.FieldGroup" Qualifier="i18nflight">
                     <Record Type="UI.FieldGroupType">
