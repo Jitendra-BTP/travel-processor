@@ -205,7 +205,16 @@
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/Travel/to_Booking"
+              "contextPath": "/Travel/to_Booking",
+              "controlConfiguration": {
+                "to_BookSupplement/@com.sap.vocabularies.UI.v1.LineItem#i18nbookingSupplements": {
+                  "columns": {
+                    "DataField::BookingSupplementID": {
+                      "width": "15em"
+                    }
+                  }
+                }
+              }
             }
           }
         }

@@ -376,6 +376,107 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="{@i18n>generalInformation}"/>
+                            <PropertyValue Property="ID" String="i18ngeneralInformation1"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Booking"/>
+                                        <PropertyValue Property="ID" String="i18ngeneralInformation"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#i18ngeneralInformation"/>
+                                    </Record>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Flight"/>
+                                        <PropertyValue Property="ID" String="i18nbooking"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#i18nbooking"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n>bookingSupplements}"/>
+                            <PropertyValue Property="ID" String="i18nbookingSupplements"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_BookSupplement/@UI.LineItem#i18nbookingSupplements"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="i18ngeneralInformation">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="BookingID"/>
+                                    <PropertyValue Property="Label" String="{@i18n>bookingId}"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="BookingDate"/>
+                                    <PropertyValue Property="Label" String="{@i18n>bookingDate}"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="to_Customer_CustomerID"/>
+                                    <PropertyValue Property="Label" String="{@i18n>customer}"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="BookingStatus_code"/>
+                                    <PropertyValue Property="Label" String="{@i18n>bookingStatus}"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="i18nbooking">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="to_Carrier_AirlineID"/>
+                                    <PropertyValue Property="Label" String="{@i18n>airline}"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ConnectionID"/>
+                                    <PropertyValue Property="Label" String="{@i18n>flightNumber}"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="FlightDate"/>
+                                    <PropertyValue Property="Label" String="{@i18n>flightDate}"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="FlightPrice"/>
+                                    <PropertyValue Property="Label" String="{@i18n>flightPrice}"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderFacets">
+                    <Collection></Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="i18nflight">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection/>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="to_Customer/FullName"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="TypeName" String=""/>
+                        <PropertyValue Property="TypeNamePlural" String=""/>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="BookingID"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
             </Annotations>
             <Annotations Target="TravelService.Booking/to_Carrier_AirlineID">
                 <Annotation Term="Common.Text" Path="to_Carrier/Name">
@@ -417,6 +518,32 @@
                             </Collection>
                         </PropertyValue>
                     </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="TravelService.BookingSupplement">
+                <Annotation Term="UI.LineItem" Qualifier="i18nbookingSupplements">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BookingSupplementID"/>
+                            <PropertyValue Property="Label" String="{@i18n>bookingSupplementId}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="to_Supplement/Description"/>
+                            <PropertyValue Property="Label" String="{@i18n>product}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="to_Supplement/Price"/>
+                            <PropertyValue Property="Label" String="{@i18n>productPrice}"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="TravelService.Supplement/Price">
+                <Annotation Term="Measures.ISOCurrency" Path="CurrencyCode/code"/>
+            </Annotations>
+            <Annotations Target="TravelService.BookingSupplement/BookingSupplementID">
+                <Annotation Term="Common.Text" Path="to_Supplement_SupplementID">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextSeparate"/>
                 </Annotation>
             </Annotations>
         </Schema>
