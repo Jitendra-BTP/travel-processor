@@ -129,7 +129,7 @@
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
-              "enhanceI18n" : "i18n/customTravel.properties",
+              "enhanceI18n": "i18n/customTravel.properties",
               "contextPath": "/Travel",
               "variantManagement": "Page",
               "navigation": {
@@ -177,6 +177,21 @@
                 "to_Booking": {
                   "detail": {
                     "route": "BookingObjectPage"
+                  }
+                }
+              },
+              "controlConfiguration": {
+                "to_Booking/@com.sap.vocabularies.UI.v1.LineItem#i18nbookings": {
+                  "columns": {
+                    "DataField::BookingDate": {
+                      "width": "10em"
+                    },
+                    "DataField::ConnectionID": {
+                      "width": "10em"
+                    },
+                    "DataField::FlightDate": {
+                      "width": "10em"
+                    }
                   }
                 }
               }

@@ -19,76 +19,27 @@
                         <PropertyValue Property="Data">
                             <Collection>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="createdAt"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="createdBy"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="LastChangedAt"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="LastChangedBy"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="TravelID"/>
+                                    <PropertyValue Property="Label" String="{@i18n>travelId}"/>
                                     <PropertyValue Property="Value" Path="TravelID"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="BeginDate"/>
-                                    <PropertyValue Property="Value" Path="BeginDate"/>
+                                    <PropertyValue Property="Label" String="{@i18n>agency}"/>
+                                    <PropertyValue Property="Value" Path="to_Agency_AgencyID"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="EndDate"/>
-                                    <PropertyValue Property="Value" Path="EndDate"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="BookingFee"/>
-                                    <PropertyValue Property="Value" Path="BookingFee"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="TotalPrice"/>
-                                    <PropertyValue Property="Value" Path="TotalPrice"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="CurrencyCode_code"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="Progress"/>
-                                    <PropertyValue Property="Value" Path="Progress"/>
+                                    <PropertyValue Property="Label" String="{@i18n>customer}"/>
+                                    <PropertyValue Property="Value" Path="to_Customer_CustomerID"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Label" String="Description"/>
                                     <PropertyValue Property="Value" Path="Description"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="TravelStatus_code"/>
-                                    <PropertyValue Property="Value" Path="TravelStatus_code"/>
+                                    <PropertyValue Property="Value" Path="BeginDate"/>
+                                    <PropertyValue Property="Label" String="{@i18n>startingDate}"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="to_Agency_AgencyID"/>
-                                    <PropertyValue Property="Value" Path="to_Agency_AgencyID"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="to_Customer_CustomerID"/>
-                                    <PropertyValue Property="Value" Path="to_Customer_CustomerID"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="CustomerFullName"/>
-                                    <PropertyValue Property="Value" Path="CustomerFullName"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Label" String="AgencyName"/>
-                                    <PropertyValue Property="Value" Path="AgencyName"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="PassengerCountryName"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="PassengerCountry"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="TravelStatusName"/>
+                                    <PropertyValue Property="Value" Path="EndDate"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>
@@ -100,6 +51,11 @@
                             <PropertyValue Property="ID" String="GeneratedFacet1"/>
                             <PropertyValue Property="Label" String="General Information"/>
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GeneratedGroup"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n>bookings}"/>
+                            <PropertyValue Property="ID" String="i18nbookings"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_Booking/@UI.LineItem#i18nbookings"/>
                         </Record>
                     </Collection>
                 </Annotation>
@@ -289,6 +245,95 @@
                         </PropertyValue> -->
                     </Record>
                 </Annotation>
+            </Annotations>
+            <Annotations Target="TravelService.Booking">
+                <Annotation Term="UI.LineItem" Qualifier="i18nbookings">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="to_Carrier/AirlinePicURL"/>
+                            <PropertyValue Property="Label" String="{@i18n>airlinePic}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BookingID"/>
+                            <PropertyValue Property="Label" String="BookingID"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BookingDate"/>
+                            <PropertyValue Property="Label" String="{@i18n>bookingDate}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="to_Customer_CustomerID"/>
+                            <PropertyValue Property="Label" String="{@i18n>customer}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="to_Carrier_AirlineID"/>
+                            <PropertyValue Property="Label" String="{@i18n>airline}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ConnectionID"/>
+                            <PropertyValue Property="Label" String="{@i18n>flightNumber}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="FlightDate"/>
+                            <PropertyValue Property="Label" String="{@i18n>flightDate}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="FlightPrice"/>
+                            <PropertyValue Property="Label" String="{@i18n>flightPrice}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BookingStatus_code"/>
+                            <PropertyValue Property="Label" String="{@i18n>bookingStatus}"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.Chart#TotalSupplPrice"/>
+                            <PropertyValue Property="Label" String="{@i18n>supplements}"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="TotalSupplPrice">
+                    <Record>
+                        <PropertyValue Property="Value" Path="TotalSupplPrice"/>
+                        <PropertyValue Property="MinimumValue" Decimal="0"/>
+                        <PropertyValue Property="MaximumValue" Decimal="120"/>
+                        <PropertyValue Property="TargetValue" Decimal="100"/>
+                        <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/BulletChart"/>
+                        <PropertyValue Property="CriticalityCalculation">
+                            <Record>
+                                <PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Maximize"/>
+                                <PropertyValue Property="DeviationRangeLowValue" Decimal="20"/>
+                                <PropertyValue Property="ToleranceRangeLowValue" Decimal="75"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Chart" Qualifier="TotalSupplPrice">
+                    <Record>
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bullet"/>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>TotalSupplPrice</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#TotalSupplPrice"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                                    <PropertyValue Property="Measure" PropertyPath="TotalSupplPrice"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="TravelService.Booking/to_Carrier_AirlineID">
+                <Annotation Term="Common.Text" Path="to_Carrier/Name">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="TravelService.Booking/FlightPrice">
+                <Annotation Term="Measures.ISOCurrency" Path="CurrencyCode/code"/>
             </Annotations>
         </Schema>
     </edmx:DataServices>
