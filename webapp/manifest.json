@@ -129,6 +129,7 @@
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
+              "enhanceI18n" : "i18n/customTravel.properties",
               "contextPath": "/Travel",
               "variantManagement": "Page",
               "navigation": {
