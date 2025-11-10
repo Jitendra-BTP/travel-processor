@@ -150,6 +150,10 @@
                             <PropertyValue Property="Action" String="TravelService.acceptTravel"/>
                             <PropertyValue Property="Label" String="acceptTravel"/>
                         </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Action" String="TravelService.deductDiscount"/>
+                            <PropertyValue Property="Label" String="deductDiscount"/>
+                        </Record>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.DataPoint" Qualifier="Progress">
@@ -166,6 +170,22 @@
                         <PropertyPath>TravelStatus_code</PropertyPath>
                         <PropertyPath>BeginDate</PropertyPath>
                         <PropertyPath>EndDate</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Action" String="TravelService.rejectTravel"/>
+                            <PropertyValue Property="Label" String="rejectTravel"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Action" String="TravelService.acceptTravel"/>
+                            <PropertyValue Property="Label" String="acceptTravel"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Action" String="TravelService.deductDiscount"/>
+                            <PropertyValue Property="Label" String="deductDiscount"/>
+                        </Record>
                     </Collection>
                 </Annotation>
             </Annotations>
