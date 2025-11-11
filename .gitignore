@@ -8,3 +8,6 @@ Makefile*.mta
 resources
 archive.zip
 .*_mta_build_tmp
+
+
+# Pending use singleton entity for bullet micro chart (Constant value)
