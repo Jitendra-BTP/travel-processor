@@ -587,6 +587,9 @@
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextSeparate"/>
                 </Annotation>
             </Annotations>
+            <Annotations Target="TravelService.Travel/Description">
+                <Annotation Term="UI.MultiLineText" Bool="true"/>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
