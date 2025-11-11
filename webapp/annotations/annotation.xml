@@ -600,17 +600,20 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="to_Carrier_AirlineID"/>
                                 </Record>
                                 <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="ValueListProperty" String="ConnectionID"/>
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="ConnectionID"/>
+                                    <PropertyValue Property="ValueListProperty" String="ConnectionID"/>
                                 </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                <Record Type="Common.ValueListParameterInOut">
                                     <PropertyValue Property="ValueListProperty" String="FlightDate"/>
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FlightDate"/>
                                 </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                <Record Type="Common.ValueListParameterInOut">
                                     <PropertyValue Property="ValueListProperty" String="Price"/>
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FlightPrice"/>
                                 </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                <Record Type="Common.ValueListParameterInOut">
                                     <PropertyValue Property="ValueListProperty" String="CurrencyCode_code"/>
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CurrencyCode_code"/>
                                 </Record>
                                 <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="to_Airline/Name"/>
@@ -630,6 +633,7 @@
                         <PropertyValue Property="CollectionPath" String="Flight"/>
                     </Record>
                 </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
             </Annotations>
         </Schema>
     </edmx:DataServices>
