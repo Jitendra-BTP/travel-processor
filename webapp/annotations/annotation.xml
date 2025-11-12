@@ -620,17 +620,19 @@
                     <Collection>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="BookingSupplementID"/>
-                            <PropertyValue Property="Label" String="{@i18n>bookingSupplementId}"/>
+                            <PropertyValue Property="Label" String="BookingSupplementID"/>
                         </Record>
+
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="to_Supplement/Description"/>
+                            <PropertyValue Property="Value" Path="to_Supplement_SupplementID"/>
                             <PropertyValue Property="Label" String="{@i18n>product}"/>
                         </Record>
+
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="to_Supplement/Price"/>
+                            <PropertyValue Property="Value" Path="Price"/>
                             <PropertyValue Property="Label" String="{@i18n>productPrice}"/>
                         </Record>
-                    </Collection>
+</Collection>
                 </Annotation>
             </Annotations>
             <Annotations Target="TravelService.Supplement/Price">
@@ -787,6 +789,64 @@
                                 </Record>
                                 <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="OccupiedSeats"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+            </Annotations>
+            <Annotations Target="TravelService.Supplement/Description">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="Supplement"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Description"/>
+                                    <PropertyValue Property="ValueListProperty" String="SupplementID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="ValueListProperty" String="Price"/>
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Price"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="ValueListProperty" String="CurrencyCode_code"/>
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CurrencyCode_code"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Description"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+            </Annotations>
+            <Annotations Target="TravelService.Supplement/SupplementID">
+                <Annotation Term="Common.Text" Path="Description"></Annotation>
+            </Annotations>
+            <Annotations Target="TravelService.BookingSupplement/to_Supplement_SupplementID">
+                <Annotation Term="Common.Text" Path="to_Supplement/Description"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="Supplement"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="to_Supplement_SupplementID"/>
+                                    <PropertyValue Property="ValueListProperty" String="SupplementID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="ValueListProperty" String="Price"/>
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Price"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="ValueListProperty" String="CurrencyCode_code"/>
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CurrencyCode_code"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Description"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>
