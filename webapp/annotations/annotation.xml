@@ -632,7 +632,7 @@
                             <PropertyValue Property="Value" Path="Price"/>
                             <PropertyValue Property="Label" String="{@i18n>productPrice}"/>
                         </Record>
-</Collection>
+                    </Collection>
                 </Annotation>
             </Annotations>
             <Annotations Target="TravelService.Supplement/Price">
