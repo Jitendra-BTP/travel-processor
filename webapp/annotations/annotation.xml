@@ -218,6 +218,20 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+                <Annotation Term="Common.SideEffects" Qualifier="TotalPriceSideEffectQualifier">
+                    <Record Type="Common.SideEffectsType">
+                        <PropertyValue Property="SourceEntities">
+                            <Collection>
+                                <NavigationPropertyPath>to_Booking</NavigationPropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="TargetProperties">
+                            <Collection>
+                                <String>TotalPrice</String>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
             </Annotations>
             <Annotations Target="TravelService.Travel/TotalPrice">
                 <Annotation Term="Measures.ISOCurrency" Path="CurrencyCode_code"/>
@@ -548,6 +562,20 @@
                                     <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
                                     <PropertyValue Property="Measure" PropertyPath="TotalSupplPrice"/>
                                 </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.SideEffects" Qualifier="SupplementSideEffectQualifier">
+                    <Record Type="Common.SideEffectsType">
+                        <PropertyValue Property="SourceEntities">
+                            <Collection>
+                                <NavigationPropertyPath>to_BookSupplement</NavigationPropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="TargetProperties">
+                            <Collection>
+                                <String>TotalSupplPrice</String>
                             </Collection>
                         </PropertyValue>
                     </Record>
