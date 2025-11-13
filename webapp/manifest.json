@@ -192,6 +192,12 @@
                     "DataField::FlightDate": {
                       "width": "10em"
                     }
+                  },
+                  "tableSettings": {
+                    "creationMode": {
+                      "name": "Inline",
+                      "createAtEnd": true
+                    }
                   }
                 }
               }
@@ -211,6 +217,12 @@
                   "columns": {
                     "DataField::BookingSupplementID": {
                       "width": "15em"
+                    }
+                  },
+                  "tableSettings": {
+                    "creationMode": {
+                      "createAtEnd": true,
+                      "name": "Inline"
                     }
                   }
                 }
