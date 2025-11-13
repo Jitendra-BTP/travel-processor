@@ -40,9 +40,11 @@
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="BeginDate"/>
                                     <PropertyValue Property="Label" String="{@i18n>startingDate}"/>
+                                    <Annotation Term="UI.Hidden" Path="TravelStatus/cancelRestrictions"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="EndDate"/>
+                                    <Annotation Term="UI.Hidden" Path="TravelStatus/cancelRestrictions"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>
