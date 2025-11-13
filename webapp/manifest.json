@@ -224,12 +224,5 @@
   "sap.fiori": {
     "registrationIds": [],
     "archeType": "transactional"
-  },
-  "sap.fe": {
-    "macros": {
-      "table": {
-        "defaultCreationMode": "InlineCreationRows"
-      }
-    }
   }
 }
